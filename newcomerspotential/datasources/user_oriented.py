@@ -72,7 +72,7 @@ class UserFirstSessionRevision(DependentSet):
     
     def __init__(self, name):
         super().__init__(name)
-        self.revisions = Datasource(name + ".revision")
+        self.revision = Datasource(name + ".revision")
         """`list` ( `:class:Revision` ) : 
         The first revision belonging to user
         """
@@ -85,9 +85,9 @@ class UserFirstSessionEdits(DependentSet):
     
     def __init__(self, name):
         super().__init__(name)
-        self.revisions =Datasource(name + ".edits")
+        self.edits = Datasource(name + ".edits")
         """`list` ( `:class:Revision` ) : 
-        The revisions belonging to user's first session'
+        The edits belonging to user's first session'
         """
         
 class UserFirstSessionUploads(DependentSet):
@@ -97,7 +97,7 @@ class UserFirstSessionUploads(DependentSet):
     
     def __init__(self, name):
         super().__init__(name)
-        self.revisions =Datasource(name + ".uploads")
+        self.uploads = Datasource(name + ".uploads")
 
 class UserFirstSessionMoves(DependentSet):
     """
@@ -106,4 +106,4 @@ class UserFirstSessionMoves(DependentSet):
     
     def __init__(self, name):
         super().__init__(name)
-        self.revisions =Datasource(name + ".page_moves")
+        self.page_moves = Datasource(name + ".page_moves")
