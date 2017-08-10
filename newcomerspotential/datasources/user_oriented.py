@@ -72,7 +72,7 @@ class UserFirstSessionRevision(DependentSet):
     
     def __init__(self, name):
         super().__init__(name)
-        self.revisions =Datasource(name + ".revision")
+        self.revisions = Datasource(name + ".revision")
         """`list` ( `:class:Revision` ) : 
         The first revision belonging to user
         """
