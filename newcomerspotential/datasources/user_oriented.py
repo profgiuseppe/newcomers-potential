@@ -17,7 +17,7 @@ class User(DependentSet):
                  include_first_session_revision=True,
                  include_first_session_edits=True,
                  include_first_session_uploads=False,
-                 include_page_moves=False):
+                 include_first_session_page_moves=False):
         super().__init__(name)
         self.id = Datasource(name + ".id")
         "`int` : The id of the user who saved the edit.  0 for IPs."
@@ -44,7 +44,7 @@ class User(DependentSet):
             self.first_session_uploads = UserFirstSessionUploads(name + \
             ".uploads")
             
-        if include_first_session_moves:
+        if include_first_session_page_moves:
             self.first_session_modes = UserFirstSessionMoves(name + ".moves")
 
 class UserInfo(DependentSet):
